@@ -339,7 +339,7 @@ function App() {
         <section className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow"><Sparkles size={16} /> Built for crisp, real-money price discovery on QIE</p>
-            <h1>Beautiful prediction markets. Native QIE liquidity. Zero fluff.</h1>
+            <h1>Predict on QIE. Zero fluff.</h1>
             <p className="subtitle">A premium, admin-curated market layer for the QIE ecosystem. Create markets, trade yes or no with {ENV.symbol}, and settle outcomes fully on-chain.</p>
             <div className="hero-actions">
               {!account && <button onClick={connectWallet}>Connect wallet</button>}
