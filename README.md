@@ -1,52 +1,19 @@
-# Qast — Vercel live read fix
+## ⚠️ Important Notice Before Use
 
-This is the compact Vercel-ready Qast frontend fixed to match the already-deployed QIE mainnet contract:
+QAST is a QIE-powered prediction market built for ecosystem experimentation, community forecasting, and hackathon submission.
 
-`0x669fa07b8518d27b5F0286b78868505300eE6224`
+Before cloning, deploying, forking, or integrating this project into a live environment, please contact the Mushee team for setup guidance, deployment review, market configuration, and security verification.
 
-Important fix:
-- The deployed contract uses `markets(uint256)` public getter, not `getMarket(uint256)`.
-- The deployed contract uses `claimed(uint256,address)`, not `hasClaimed(uint256,address)`.
-- The deployed contract uses 1-based market IDs: first market is `1`, not `0`.
+**Contact:**  
+Email: chen@mushee.xyz & contact@mushee.xyz 
+X/Twitter: https://x.com/mushee_io   
 
-## Vercel settings
+Prediction markets involve risk. Users should review each market’s rules, resolution source, expiry date, and outcome conditions before participating. QAST does not guarantee market outcomes, profits, liquidity, or rewards.
 
-Install command:
+Do not deploy this project to mainnet without reviewing all environment variables, contract addresses, wallet permissions, RPC settings, market resolution logic, admin controls, and backend security setup.
 
-```bash
-npm install --no-package-lock --no-audit --no-fund --legacy-peer-deps --prefer-online
-```
+Never expose private keys, seed phrases, API tokens, backend secrets, admin wallets, or deployment credentials in frontend code, GitHub, screenshots, logs, or public deployment settings.
 
-Build command:
+The Mushee team is not responsible for losses, failed deployments, incorrect market resolutions, exposed secrets, broken integrations, unauthorized forks, or misuse caused by incorrect setup.
 
-```bash
-npm run build
-```
-
-Output directory:
-
-```text
-dist
-```
-
-Node:
-
-```text
-20.x
-```
-
-## Vercel environment variables
-
-```env
-VITE_QAST_CONTRACT_ADDRESS=0x669fa07b8518d27b5F0286b78868505300eE6224
-VITE_QIE_CHAIN_ID=1990
-VITE_QIE_CHAIN_NAME=QIEMainnet
-VITE_QIE_RPC_URL=https://rpc1mainnet.qie.digital/
-VITE_QIE_EXPLORER_URL=https://mainnet.qie.digital
-VITE_QIE_NATIVE_SYMBOL=QIEV3
-VITE_FAUCET_URL=https://q-faucet-ymmi.vercel.app/
-VITE_ADMIN_ADDRESS=0xb7f85bf000d0a37fc881bf5f1d80469f749fad98
-VITE_TREASURY_ADDRESS=0x00e348677ae2b11a48fbe1bf452133c51ba833c3
-```
-
-Do not add `PRIVATE_KEY` to Vercel.
+For safe deployment, production use, or QIE ecosystem integration, contact the team before going live.
